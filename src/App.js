@@ -1,8 +1,8 @@
 import "./App.css";
-import EmbeddedPlayer from "./components/EmbeddedPlayer";
-import Widget from "./components/Widget";
+import EmbeddedPlayer from "./components/EmbeddedPlayer.js";
+import Widget from "./components/Widget.jsx";
 import { useEffect, useState } from "react";
-import TextField from "@mui/material/TextField";
+import { TextField } from "@mui/material";
 
 function App() {
   //# sourceMappingURL=http://ent/web-sourcemaps/api.js-27d0ec1de3c5.map

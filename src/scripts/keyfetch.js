@@ -1,6 +1,5 @@
-// Deprecated. Key is not useful i dont think.
-
-const sckey = require("soundcloud-key-fetch");
+// const sckey = require("soundcloud-key-fetch");
+import * as sckey from "soundcloud-key-fetch";
 
 function test() {
   const key = sckey.fetchKey().then((key) => {
@@ -32,8 +31,8 @@ function test() {
  * Returns a promise (giving a json body).
  */
 
-export function search(query) {
-  sckey
+export function search_soundcloud(query) {
+  return sckey
     .fetchKey()
     .then((clientid) => {
       return fetch(
@@ -42,3 +41,11 @@ export function search(query) {
     })
     .then((jsonres) => jsonres.json());
 }
+
+function test2() {
+  search_soundcloud("the buzz").then((obj) => console.log(obj));
+}
+
+// Main
+
+// test2();

@@ -1,5 +1,8 @@
-import React, { useState } from "react";
-import { search } from "../scripts/keyfetch";
+import React, { useEffect, useState } from "react";
+// import { search } from "../scripts/keyfetch";
+// import * as sckey from "soundcloud-key-fetch";
+// import { fetchKey } from "soundcloud-key-fetch";
+// import { fetchKey } from "../scripts/sckey.js";
 
 function parseInlineStyle(style) {
   const template = document.createElement("template");
@@ -18,6 +21,21 @@ let tag2Style = parseInlineStyle("color: #cccccc; text-decoration: none;");
 
 function EmbeddedPlayer({ query }) {
   const [uri, setUri] = useState("https://api.soundcloud.com/tracks/202111840");
+
+  useEffect(() => {
+    // fetchKey();
+    // .then((clientid) => {
+    //   return fetch(
+    //     `https://api-v2.soundcloud.com/search?client_id=${clientid}&q=${query}&limit=1`
+    //   );
+    // })
+    // .then((jsonres) => jsonres.json())
+    // .then((object) => {
+    //   console.log(object);
+    //   // setUri(object.collection[0].uri);
+    //   setUri("https://api.soundcloud.com/tracks/202111840");
+    // });
+  }, []);
 
   // search(query).then((object) => {
   //   console.log(object);
